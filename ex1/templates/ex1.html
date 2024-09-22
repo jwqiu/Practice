@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hello robot</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='ex1.css') }}">
+	</head>
+
+	<script>
+		function myFunction() {
+		var x = document.getElementById("myText").value;
+		alert("Hello " + x + "!");
+		}
+	</script>
+
+
+	<body>
+		<div class="container">
+			<img src="{{ url_for('static', filename='robot.jpg') }}">
+			<h2>MAC ROBOT</h2>
+			<h4 class="wenzi">hi, i am mac robot,what is your name?</h4>
+			<div>
+				<!-- <form action="/submit" method="post"> -->
+					<input type="text" class="wenben" id="myText" name="user_input" placeholder="请输入文本">
+					<button class="anniu" onclick="myFunction()">Submit</button>
+				<!-- </form> -->
+			</div>
+		</div>
+    </body>
+</html>
+

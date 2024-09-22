@@ -1,0 +1,71 @@
+body {
+    color: black; /* 设置文本颜色 */
+    background-image: url('/static/image.png'); /* 背景图片路径 */
+    height: 100vh; /* 设置高度为视口高度 */
+    width: 100%; /* 设置宽度，充满整个页面 */
+    background-size: auto 500px; /* 背景图像高度固定为 500px，宽度等比例缩小 */
+    background-position: center;
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction:column; /* 让小图片和文本垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    margin: 0; /* 去掉默认的边距 */
+    background-repeat: repeat; /* 背景图片重复填充 */
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+img {
+    height: 100px; /* 设置小图片的高度 */
+    width: auto; /* 宽度自动调整以保持比例 */
+}
+
+h2 {
+    margin-bottom: -5px; /* 调整 h2 底部的外边距 */
+}
+
+
+.container{
+    background-color:white;
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction:column; /* 让小图片和文本垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    border-radius: 20px;
+    padding: 20px; /* 内容内边距 */
+    opacity: 0.8;
+}
+
+
+.wenben{
+    margin-right: 10px;
+    width:130px;
+    height:30px;
+    margin-top: 1px; /* 调整 h4 顶部的外边距 */
+    padding: 0px
+}
+
+.anniu{
+    color:black;
+    width: 70px;
+    height:35px;
+    border-radius: 5px;
+    border: none; /* 去掉边框 */
+    background-color:black;
+    color:white;
+    cursor: pointer; /* 鼠标指针样式 */
+    padding: 10px
+
+}
+
+.anniu:hover{
+    color:black;
+    width: 70px;
+    height:35px;
+    border-radius: 5px;
+    border: none; /* 去掉边框 */
+    background-color:grey;
+    color:white;
+    cursor: pointer; /* 鼠标指针样式 */
+    padding: 10px
+
+}

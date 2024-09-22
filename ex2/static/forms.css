@@ -1,0 +1,127 @@
+/*
+   Survey Forms Style Sheet
+   Author: 
+   Date:   
+
+*/
+
+fieldset{
+   background:rgb(255, 246, 205);
+   border:1px solid rgb(233,69,0);
+   float:left;
+   margin:10px 0px 10px 2.5%;
+   width:46%
+}
+
+legend{
+   background-color:rgb(233,69,0);
+   color:white;
+   padding:3px 0px;
+   text-align: 5px;
+   width:100%
+}
+
+label{
+   clear:left;
+   display:block;
+   float:left;
+   font-size:0.9em;
+   margin:7px 4% 7px 5px;
+   width:40%;
+}
+
+input{
+   display:block;
+   float:left;
+   font-size:0.9em;
+   margin:7px 0px;
+   width:50%;
+}
+
+input#state{
+   width:50px;
+}
+
+input::placeholder {
+   color: grey; /* 设置 placeholder 的文本颜色为红色 */
+   opacity: 0.2; /* 整个 input 的透明度为 50% */
+
+}
+
+select{
+   display: block;
+   float:left;
+   font-size:0.9em;
+   margin:7px 0px;
+}
+
+fieldset.optiongroup{
+   border-width:0px
+}
+
+
+fieldset.optiongroup label{
+   display:inline;
+   float:none;
+   margin:0px 3px 0px 0px;
+   width:30px
+}
+
+
+fieldset.optiongroup input{
+   display:inline;
+   float:none;
+   margin:0px 20px 0px 0px;
+   width:20px
+}
+
+textarea{
+   font-size:0.9em;
+   height: 150px;
+   margin:10px 0px;
+   width:50%;
+   display: block;
+   float:left;
+
+}
+
+#newsletter{
+   color:rgb(233,69,0);
+   float:none;
+   margin:10px auto;
+   text-align:center;
+   width:90%;
+}
+
+#newsletter input{
+   display:inline;
+   float:none;
+   width:20px;
+}
+
+#orderspermonth{
+   width:70px;
+}
+
+label.sliderlabel{
+   font-size:0.7em;
+   margin: 10px 0px;
+   width:10px;
+   text-align: center;
+   clear:none;
+}
+
+input[type="range"]{
+   width:150px;
+}
+
+form p{
+   text-align: center;
+}
+
+input[type="submit"],input[type="reset"]{
+   display:inline;
+   float:none;
+   height:40px;
+   width:200px;
+}

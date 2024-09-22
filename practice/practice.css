@@ -1,0 +1,38 @@
+/* .container {
+    display: block;          
+    align-items: flex-start; 
+    justify-content: space-between;  
+}
+
+.left {
+    width: 40%;            
+    background-color: lightblue;  
+    display: block;
+    float: left;
+}
+
+.right {
+    width: 50%;            
+    background-color: lightcoral;  
+    display: block;
+    float:right;
+}
+
+.right .child {
+    margin-bottom: 10px;   
+}
+ */
+
+ label.sliderlabel{
+    font-size:0.7em;
+    margin: 10px 0px;
+    clear:left;
+
+    width:10px;
+ }
+ 
+ input[type="range"]{
+    width:100px;
+ }
+
+

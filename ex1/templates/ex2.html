@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hello robot</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='ex1.css') }}">
+	</head>
+
+	<body>
+        <div class="container">
+            <img src="{{ url_for('static', filename='robot.jpg') }}">
+            <h2>MAC ROBOT</h2>
+            <div>
+                <p>你好，{{ user_input }}，这是我的第一个网页！</p>  <!-- 在这里展示用户输入的信息 -->
+                <a href="/">返回</a>  <!-- 提供一个链接返回输入页面 -->
+            </div>
+        </div>
+    </body>
+</html>
