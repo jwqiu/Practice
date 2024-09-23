@@ -52,144 +52,164 @@
          </article>
       </header>
 
-   <section>
-      <p>Required values are marked by an asterisk (*)</p>
-      <form action="url" id="survey" name="survey" method="post">
-         <fieldset id="custinfo">
-            <legend>customer information</legend>
+      <section>
+         <p>Required values are marked by an asterisk (*)</p>
+         <form action="url" id="survey" name="survey" method="post">
+            <fieldset id="custinfo">
+               <legend>customer information</legend>
 
-            <label for="custname">name *</label>
-            <input type="text" name="custname" id="custname" placeholder="first and last name" required="required">
-
-
-            <label for="city">city</label>
-            <input type="text" name="city" id="city" placeholder="请输入" value="Ormond Beach">
+               <label for="custname">name *</label>
+               <input type="text" name="custname" id="custname" placeholder="first and last name" required="required">
 
 
-            <label for="state">state</label>
-            <input type="text" name="state" id="state" placeholder="请输入" value="FL">
+               <label for="city">city</label>
+               <input type="text" name="city" id="city" placeholder="请输入" value="Ormond Beach">
 
 
-            <label for="zip">postal code</label>
-            <input type="text" name="zip" id="zip" placeholder="nnnn(-nnnn)">
+               <label for="state">state</label>
+               <input type="text" name="state" id="state" placeholder="请输入" value="FL">
 
 
-            <label for="phone">phone number </label>
-            <input type="text" name="phone" id="phone" placeholder="(nnn)nnn-nnnn">
+               <label for="zip">postal code</label>
+               <input type="text" name="zip" id="zip" placeholder="nnnn(-nnnn)">
 
 
-            <label for="email">email *</label>
-            <input type="text" name="email" id="email" placeholder="请输入" required="required">
-            
-            <label>where did you hear about us <br/>(select all that apply)</label>
-            <select name="infosrc" id="infosrc" size="5" multiple="multiple">
-               <option value="internet">internet</option>
-               <option value="mag">magazine</option>
-               <option value="news">newspaper</option>
-               <option value="word">word of mouth</option>
-               <option value="other">other</option>
-            </select>
+               <label for="phone">phone number </label>
+               <input type="text" name="phone" id="phone" placeholder="(nnn)nnn-nnnn">
 
-            <label for="orderspermonth">
-               how many times do you dine out per month?
-            </label>
-            <input name="orderspermonth" id="orderspermonth" type="number" value="1" min="0" max="10" step="1"/>
-            
-            <label for="favdish">what is your favorite red ball dish?</label>
-            <input name="favdish" id="favdish" list="dishtype"/>
-            <datalist id="dishtype">
-               <option value="a"></option>
-               <option value="b"></option>
-               <option value="c"></option>
-               <option value="d"></option>
-               <option value="e"></option>
-               <option value="f"></option>
-               <option value="g"></option>
-            </datalist>
 
-         </fieldset>
+               <label for="email">email *</label>
+               <input type="text" name="email" id="email" placeholder="请输入" required="required">
+               
+               <label>where did you hear about us <br/>(select all that apply)</label>
+               <select name="infosrc" id="infosrc" size="5" multiple="multiple">
+                  <option value="internet">internet</option>
+                  <option value="mag">magazine</option>
+                  <option value="news">newspaper</option>
+                  <option value="word">word of mouth</option>
+                  <option value="other">other</option>
+               </select>
 
-         <fieldset id="experience">
-            <legend>share your experience at red ball pizza</legend>
-  
-            <label class="title" for="visitdate">date of visit </label>
-            <input type="date" name="visitdate" id="visitdate" placeholder="请输入">
+               <label for="orderspermonth">
+                  how many times do you dine out per month?
+               </label>
+               <input name="orderspermonth" id="orderspermonth" type="number" value="1" min="0" max="10" step="1"/>
+               
+               <label for="favdish">what is your favorite red ball dish?</label>
+               <input name="favdish" id="favdish" list="dishtype"/>
+               <datalist id="dishtype">
+                  <option value="a"></option>
+                  <option value="b"></option>
+                  <option value="c"></option>
+                  <option value="d"></option>
+                  <option value="e"></option>
+                  <option value="f"></option>
+                  <option value="g"></option>
+               </datalist>
 
-            <label class="title" for="receipt">receipt number </label>
-            <input type="text"  name="receipt" id="receipt" placeholder="re-nnnnn" required="required">
-            
-            <label class="title" for="ordertype">order type</label>
-            <select name="ordertype" id="ordertype">
-               <option value="type1">carry out</option>
-               <option value="type2">delivery</option>
-               <option value="type3" selected="selected">dine in</option>
-               <option value="type4">take and bake</option>
-            </select>
-            
-            <label>was your service friendly?</label>
-            <fieldset class="optiongroup">
-               <label for="syes">yes</label>
-               <input type="radio" name="servicefriendly" id="syes" value="yes">
-
-               <label for="sno">no</label>
-               <input type="radio" name="servicefriendly" id="sno" value="no">
             </fieldset>
 
-            <label>was your order correct?</label>
-            <fieldset class="optiongroup">
-               <label for="oyes">yes</label>
-               <input type="radio" name="ordercorrect" id="oyes" value="yes">
-
-               <label for="ono">no</label>
-               <input type="radio" name="ordercorrect" id="ono" value="no">
-            </fieldset>
-
-            <label>was your food hot?</label>
-            <fieldset class="optiongroup">
-               <label for="hotyes">yes</label>
-               <input type="radio" name="foodhot" id="hotyes" value="yes">
-
-               <label for="hotno">no</label>
-               <input type="radio" name="foodhot" id="hotno" value="no">
-            </fieldset>
-
-            <label>rate the overall service<br />
-               (0 = poor;10 = great)</label>
-            <label class="sliderlabel">0</label>
-            <input name="service" id="service" type="range" value="5" min="0" max="10" step="1"/>
-            <label class="sliderlabel">10</label>
-
-            <label>rate the food quality<br />
-               (0 = poor;10 = great)</label>
-            <label class="sliderlabel">0</label>
-            <input name="service" id="service" type="range" value="5" min="0" max="10" step="1"/>
-            <label class="sliderlabel">10</label>
-
-            <label class='left'for="comments">tell us more about your experience</label>
-            <textarea class='right' name="comments" id="comments"></textarea>
-         </fieldset>
-
-         <label id="newsletter">
-            <input type="checkbox" name="newscb"/>
-            email me with your newsletter for great coupons and specials
-         </label>
-
-         <p>
-            <input type="submit" value="submit my survery">
-            <input type="reset" value="cancel">
-         </p>
-
-      </form>
-   </section>
+            <fieldset id="experience">
+               <legend>share your experience at red ball pizza</legend>
    
-   <footer>
-      <address>
-         Red Ball Pizza &bull;
-         811 Beach Drive &bull;
-         Ormond Beach, FL  32175 &bull;
-         (386) 555 - 7499 
-      </address>
-   </footer>
+               <label class="title" for="visitdate">date of visit </label>
+               <input type="date" name="visitdate" id="visitdate" placeholder="请输入">
+
+               <label class="title" for="receipt">receipt number </label>
+               <input type="text"  name="receipt" id="receipt" placeholder="re-nnnnn" required="required">
+               
+               <label class="title" for="ordertype">order type</label>
+               <select name="ordertype" id="ordertype">
+                  <option value="type1">carry out</option>
+                  <option value="type2">delivery</option>
+                  <option value="type3" selected="selected">dine in</option>
+                  <option value="type4">take and bake</option>
+               </select>
+               
+               <label>was your service friendly?</label>
+               <fieldset class="optiongroup">
+                  <label for="syes">yes</label>
+                  <input type="radio" name="servicefriendly" id="syes" value="yes">
+
+                  <label for="sno">no</label>
+                  <input type="radio" name="servicefriendly" id="sno" value="no">
+               </fieldset>
+
+               <label>was your order correct?</label>
+               <fieldset class="optiongroup">
+                  <label for="oyes">yes</label>
+                  <input type="radio" name="ordercorrect" id="oyes" value="yes">
+
+                  <label for="ono">no</label>
+                  <input type="radio" name="ordercorrect" id="ono" value="no">
+               </fieldset>
+
+               <label>was your food hot?</label>
+               <fieldset class="optiongroup">
+                  <label for="hotyes">yes</label>
+                  <input type="radio" name="foodhot" id="hotyes" value="yes">
+
+                  <label for="hotno">no</label>
+                  <input type="radio" name="foodhot" id="hotno" value="no">
+               </fieldset>
+
+               <label>rate the overall service<br />
+                  (0 = poor;10 = great)</label>
+               <label class="sliderlabel">0</label>
+               <input name="service" id="service" type="range" value="5" min="0" max="10" step="1"/>
+               <label class="sliderlabel">10</label>
+
+               <label>rate the food quality<br />
+                  (0 = poor;10 = great)</label>
+               <label class="sliderlabel">0</label>
+               <input name="service" id="service" type="range" value="5" min="0" max="10" step="1"/>
+               <label class="sliderlabel">10</label>
+
+               <label class='left'for="comments">tell us more about your experience</label>
+               <textarea class='right' name="comments" id="comments"></textarea>
+            </fieldset>
+
+            <label id="newsletter">
+               <input type="checkbox" name="newscb"/>
+               email me with your newsletter for great coupons and specials
+            </label>
+
+            <p>
+               <input type="submit" value="submit my survery">
+               <input type="reset" value="cancel">
+            </p>
+
+         </form>
+      </section>
+   
+      <label class="thankyou">The prize winners of previous survey</label>
+      <table>
+         <thead>
+            <tr>
+               <th>name</th>
+               <th>email</th>
+               <th>prize</th>
+            </tr>
+         </thead>
+         <tbody>
+           {% for customer in customers%}
+            <tr>
+               <td>{{ customer[0] }}</td>
+               <td>{{ customer[1] }}</td>
+               <td>{{ customer[2] }}</td>
+            </tr>
+            {% endfor%}
+         </tbody>
+      </table>
+
+      <footer>
+         <address>
+            Red Ball Pizza &bull;
+            811 Beach Drive &bull;
+            Ormond Beach, FL  32175 &bull;
+            (386) 555 - 7499 
+         </address>
+      </footer>
 
    </body>
 
