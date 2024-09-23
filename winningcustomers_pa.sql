@@ -6,5 +6,5 @@ CREATE TABLE wiinningcustomers(
     prize VARCHAR(100) NOT NULL
 );
 INSERT INTO wiinningcustomers(name,email,prize)VALUES
-('tom','222@gmail.com','switch')
-('john','yyy@qq.com','ps4')
+('tom','222@gmail.com','switch'),
+('john','yyy@qq.com','ps4');
