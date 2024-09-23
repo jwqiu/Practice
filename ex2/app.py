@@ -15,7 +15,7 @@ connection=mysql.connector.connect(
 )
 
 cursor=connection.cursor()
-cursor.execute('SELECT name,email,prize FROM winningcustomers.customers;')
+cursor.execute('SELECT name,email,prize FROM customers;')
 customers=cursor.fetchall()
 
 cursor.close()  # 关闭游标
