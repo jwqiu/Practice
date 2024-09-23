@@ -8,10 +8,10 @@ app = Flask(__name__)  # 创建 Flask 应用实例
 
 
 connection=mysql.connector.connect(
-    host=connect.localdbhost,
-    user=connect.localdbuser,
-    password=connect.localdbpass,
-    database=connect.localdbname,
+    host=connect.dbhost,
+    user=connect.dbuser,
+    password=connect.dbpass,
+    database=connect.dbname,
 )
 
 cursor=connection.cursor()
