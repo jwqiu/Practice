@@ -40,10 +40,54 @@
     margin-left: 500px;
 
  } */
-
- label.thankyou{
+/* 
+ label.first{
     color:rgb(233,69,0);
     display: block;
-    text-align:center;
+    float: left;
     width:90%;
+ }
+
+ label.second{
+    display:block;
+    float:right;
+ } */
+/* 
+
+ label{
+   vertical-align: middle;
+ }
+
+ img{
+   vertical-align: middle;
+ } */
+
+ div.parent{
+   background-color: bisque;
+   width: 100%;
+   height: 500px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ div.first{
+   background-color: red;
+   width:150px;
+   height:150px;
+   flex: 1;             /* 使 .first 和 .second 平分剩下的空间 */
+
+ }
+
+ div.second{
+   background-color: black;
+   width:300px;
+   height:300px;
+   flex: 1;             /* 使 .first 和 .second 平分剩下的空间 */
+
+ }
+
+ label{
+   width: 100%;
+   flex: 0 0 auto;      /* 使 label 元素占据第一行的所有空间 */
+
  }

@@ -1,0 +1,215 @@
+
+body{
+    font-family:"Microsoft YaHei", 微软雅黑, sans-serif;
+    margin: 0; /* 移除默认边距 */
+    background-color: hsla(0, 10%, 86%, 0.35);
+    position: relative; /* 使 body 成为定位父元素 */
+    height: 100vh;
+
+}
+
+div.top{
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    width:100%;
+
+}
+
+img.leftlogo{
+    width: 100px;
+    height: auto;
+    /* margin-left: 150px; */
+}
+
+div.rightsug{
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex; 
+    align-items: center; 
+    font-size: 10px;
+    color: hsla(0, 0%, 0%, 0.442);
+}
+
+img.message{
+    height:20px;
+    width:auto;
+    margin-right: 3px;
+}
+
+/* div.middlearea{
+    width:100%;
+    height: 70vh;
+    background-image:url('/static/jd-banner-2880x1386.jpg') ;
+    background-repeat:no-repeat;
+    background-size: cover;
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    background-position: center;                     
+} */
+
+div.midarea{
+    position: absolute;
+    top:50%;
+    left:27%;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px; 
+    transform:translate(-50%,-50%);
+    padding: 0px;
+    justify-content: space-between;
+    display: flex; 
+    align-items: center;
+    z-index: 2;        /* 设置 z-index 为 2 */
+
+}
+
+/* div.weblogin{
+    width: 60%;
+    max-width:600px;
+    min-width:500px;
+    height: 70%;
+    background-color: white;
+    border-radius: 20px; 
+} */
+
+label.tip{
+    position: absolute;
+    top:1%;
+    left:1%;
+    font-size: 9px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 0, 0.407);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+div.phonelogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 80%;
+    margin-left: 10px;
+}
+
+/* div.phonelogin *{
+    margin-top: 30px;
+} */
+
+label.phonelogintitle{
+    margin-top: 50px ;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+img.two{
+    width: 150px;
+    height: auto;
+    /* margin-left: 150px; */
+}
+
+label.guidance{
+    font-size: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: grey;
+}
+
+label.loginproblem{
+    font-size: 10px;
+}
+
+div.weblogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:80%;
+    width: 55%;
+}
+
+
+
+div.chose{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+label.password{
+    color: red;
+    font-weight: 600;
+    margin-right: 10px;
+    
+}
+
+label.message{
+    color:grey;
+}
+
+
+input.username{
+    font-size: 12px;
+    width:250px;
+    height:40px;
+    background-color: rgba(128, 128, 128, 0.16);
+    display: block;
+    border-radius: 5px;
+    border:none;
+    margin-bottom: 10px;
+    padding-left: 10px;
+
+}
+
+input.password{
+    font-size: 12px;
+    width:250px;
+    height:40px;
+    background-color: rgba(128, 128, 128, 0.16);
+    display: block;
+    border-radius: 5px;
+    border:none;
+    padding-left: 10px;
+
+
+}
+
+label.forget{
+    margin-top: 5px;
+    font-size: 8px;
+    color: grey
+
+}
+
+input.submit{
+    background-color: red;
+    width:250px;
+    height: 30px;
+    color: white;
+    font-weight: 500;
+    border: 0cap;
+    border-radius: 5px; 
+    margin-top: 20px;
+}
+
+label.other{
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+img.slogan{
+    width:800px;
+    height:auto;
+    position:absolute;
+    right:-25%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index: 1;        /* 设置 z-index 为 2 */
+
+
+}
