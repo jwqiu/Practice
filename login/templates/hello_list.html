@@ -30,7 +30,7 @@
         <div class="function">
             <label class="functiontitle">功能<br></label>
             <a class='left' href="/">返回</a>
-            <a class='left' href="/">新增</a>
+            <a class='left' href="/add">新增</a>
 
 
         </div>
@@ -39,6 +39,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>id</th>
                         <th>账号</th>
                         <th>密码</th>
                         <th colspan="2">修改</th>
@@ -49,7 +50,12 @@
                     <tr>
                         <td>{{user[0]}}</td>
                         <td>{{user[1]}}</td>
-                        <td>编辑</td>
+                        <td>{{user[2]}}</td>
+                        <td>
+                            <form action="/edit/{{user[0]}}" method="GET">
+                                <input type="submit" value="编辑" >
+                            </form>
+                        </td>
                         <td>
                             <form action="/delete/{{user[0]}}" method="POST" onsubmit="handleSubmit(event)">
                                 <input type="submit" value="删除" >

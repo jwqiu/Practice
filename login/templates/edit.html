@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>京东</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='edit.css')}}">
+        <link rel="icon" href="{{url_for('static',filename='gerenzhiyeguihua.png')}}" type="image/png">
+        <meta name="author" content="jwqiu">
+    </head>
+    <body>
+        
+        <div class="top">
+            <div class="leftlogo">
+                <img class="leftlogo" src="{{ url_for('static', filename='jdlogo.jpeg') }}" alt="logo of jd">
+                <label class="title">
+                        你好，亲爱的用户
+                </label>
+            </div>
+            <div class="rightsug">
+                <img class="message" src="{{ url_for('static', filename='xinxi-3.png') }}" alt="message us">
+                <p>有任何问题联系我们</p> 
+            </div>
+        </div>
+
+        <div class="function">
+            <label class="functiontitle">功能<br></label>
+            <a class='left' href="/">返回</a>
+            <a class='left' href="/add">新增</a>
+        </div>
+
+        <div class="edit">
+            <label class="typein">更新用户信息</label>
+            <!-- <div class="input"> -->
+            <form action="/update/{{person[0]}}" method="POST" class="input">
+                <input class='username' type="text" id="username" name="username" value="{{person[1]}}">
+                <input class='password' type="text" id="password" name="password" value="{{person[2]}}">
+                <input class='submit' type="submit" value="提交">    
+            </form>
+            <!-- </div> -->
+        </div>
+        
+    </body>
+</html>
+
+
