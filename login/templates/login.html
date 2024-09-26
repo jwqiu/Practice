@@ -3,16 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Login In</title>
+        <title>京东</title>
         <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
         <link rel="icon" href="{{url_for('static',filename='gerenzhiyeguihua.png')}}" type="image/png">
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
         <meta name="author" content="jwqiu">
     </head>
     <body>
         
         <div class="top">
-            <img class="leftlogo" src="{{ url_for('static', filename='jdlogo.jpeg') }}" alt="logo of jd">
+            <div class="leftlogo">
+                <img class="leftlogo" src="{{ url_for('static', filename='jdlogo.jpeg') }}" alt="logo of jd">
+                <label class="title">用户登陆</label>
+            </div>
             <div class="rightsug">
                 <img class="message" src="{{ url_for('static', filename='xinxi-3.png') }}" alt="message us">
                 <p>登陆页面，改进建议</p> 
@@ -34,16 +36,17 @@
                     <label class="password">密码登陆</label>
                     <label class="message">短信登陆</label>
                 </div>
-                <div class="input">
-                    <input class='username' type="text" placeholder="账号/手机号/邮箱">
-                    <input class='password' type="text" placeholder="输入您的密码">
-                </div>
-                <label class="forget">忘记密码</label>
-                <input class='submit' type="submit" value="登陆">
+                <form action="/submit" method="POST" class="input">
+                    <input class='username' type="text" id="username" name="username" placeholder="账号/手机号/邮箱">
+                    <input class='password' type="text" id="password" name="password" placeholder="输入您的密码">
+                    <label class="forget">忘记密码</label>
+                    <input class='submit' type="submit" value="登陆">
+                </form>
+
                 <label class="other">支付宝登陆｜丁丁登陆｜忘记账号｜免费注册</label>
             </div>
         </div>
-        <img class='slogan' src="{{ url_for('static', filename='cb2996a016d528f5.jpg') }}" alt="">
+        <!-- <img class='slogan' src="{{ url_for('static', filename='cb2996a016d528f5.jpg') }}" alt=""> -->
 
     </body>
 </html>

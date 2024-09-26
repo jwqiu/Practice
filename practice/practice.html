@@ -36,7 +36,7 @@
 </label> -->
 
 
-<link rel="stylesheet" href="practice.css">
+
 <!-- <div>
   <label class="first">The prize winners of previous survey</label>
   <label class="second">hello</label>
@@ -48,10 +48,134 @@
   <label>zenmele</label>
 </div> -->
 
+<!-- <link rel="stylesheet" href="practice.css"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Bar Example with Absolute Positioned Divs</title>
+    <style>
+        /* 顶部固定的白色色块 */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%; /* 占据全屏宽度 */
+            height: 50px; /* 固定高度 */
+            background-color: white; /* 背景颜色 */
+            z-index: 1000; /* 确保位于所有元素之上 */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 为色块添加阴影 */
+        }
 
-<div class="parent">
-  <label>xxxx
-  </label>
-  <div class="first"></div>
-  <div class="second"></div>
+        /* 主体内容 */
+        .content {
+            padding-top: 60px; /* 确保主体内容下移，不覆盖白色色块 */
+            position: relative; /* 确保内容区域是相对于父元素的 */
+        }
+
+        /* 示例的相对定位的元素 */
+        .absolute-box {
+            position: absolute;
+            background-color: rgba(0, 0, 255, 0.2); /* 半透明蓝色背景 */
+            z-index: 500; /* 确保它位于白色色块的下方 */
+            width: 100px; /* 固定宽度 */
+            height: 100px; /* 固定高度 */
+        }
+
+        /* Box 1 */
+        .absolute-box.box-1 {
+            top: 10vh;
+            left: 10vw;
+        }
+
+        /* Box 2 */
+        .absolute-box.box-2 {
+            top: 50vh;
+            left: 30vw;
+        }
+
+        /* Box 3 */
+        .absolute-box.box-3 {
+            top: 30vh;
+            left: 60vw;
+        }
+
+        /* 示例的主体内容 */
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            margin: 20px;
+            position: relative; /* 相对定位 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar"></div> <!-- 顶部白色色块 -->
+
+<div class="content">
+    <div class="absolute-box box-1">Absolute Box 1</div>
+    <div class="absolute-box box-2">Absolute Box 2</div>
+    <div class="absolute-box box-3">Absolute Box 3</div>
+
+    <div class="box">Content Box 1</div>
+    <div class="box">Content Box 2</div>
+    <div class="box">Content Box 3</div>
 </div>
+
+<script>
+    // 函数：限制绝对定位元素的移动，使其不会超出窗口边缘或白色色块的区域
+    function limitPosition(element) {
+        const boxRect = element.getBoundingClientRect(); // 获取元素相对于视口的位置
+        const topBarHeight = 50; // 白色色块的高度
+        const margin = 10; // 给元素的边缘留出一点余地
+
+        // 限制元素在屏幕顶部
+        if (boxRect.top < topBarHeight) {
+            element.style.top = `${topBarHeight + margin}px`;
+        }
+
+        // 限制元素在屏幕左侧
+        if (boxRect.left < margin) {
+            element.style.left = `${margin}px`;
+        }
+
+        // 限制元素在屏幕右侧
+        if (boxRect.right > window.innerWidth - margin) {
+            element.style.left = `${window.innerWidth - boxRect.width - margin}px`;
+        }
+
+        // 限制元素在屏幕底部
+        if (boxRect.bottom > window.innerHeight - margin) {
+            element.style.top = `${window.innerHeight - boxRect.height - margin}px`;
+        }
+    }
+
+    // 获取所有绝对定位的 div
+    const absoluteBoxes = document.querySelectorAll('.absolute-box');
+
+    // 每次调整窗口大小时重新检测
+    window.addEventListener('resize', () => {
+        absoluteBoxes.forEach(box => limitPosition(box));
+    });
+
+    // 页面加载后检测一次
+    window.addEventListener('load', () => {
+        absoluteBoxes.forEach(box => limitPosition(box));
+    });
+</script>
+
+</body>
+</html>
+
+<table>
+  <tr>
+      <td rowspan="2">Merged Cell with Value</td> <!-- 垂直合并两个单元格 -->
+      <td>Row 1, Col 2</td>
+  </tr>
+  <tr>
+      <td>Row 2, Col 2</td>
+  </tr>
+</table>

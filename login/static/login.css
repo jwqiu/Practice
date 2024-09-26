@@ -5,6 +5,7 @@ body{
     background-color: hsla(0, 10%, 86%, 0.35);
     position: relative; /* 使 body 成为定位父元素 */
     height: 100vh;
+    display: flex;
 
 }
 
@@ -13,7 +14,15 @@ div.top{
     justify-content: space-between;
     align-items:flex-start;
     width:100%;
+    height: 62px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 为色块添加阴影 */
 
+}
+
+div.leftlogo{
+    display:flex;
+    align-items: center;
 }
 
 img.leftlogo{
@@ -22,9 +31,15 @@ img.leftlogo{
     /* margin-left: 150px; */
 }
 
+label.title{
+    font-family:"Microsoft YaHei", 微软雅黑, sans-serif;
+    margin-left: 10px;   
+    font-weight: 600;
+}
+
 div.rightsug{
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex; 
     align-items: center; 
     font-size: 10px;
@@ -36,6 +51,7 @@ img.message{
     width:auto;
     margin-right: 3px;
 }
+
 
 /* div.middlearea{
     width:100%;
@@ -51,9 +67,9 @@ img.message{
 
 div.midarea{
     position: absolute;
-    top:50%;
-    left:27%;
-    width: 600px;
+    left:50%;
+    top: 50%;
+    width:600px;
     height: 400px;
     background-color: white;
     border-radius: 20px; 
@@ -93,7 +109,7 @@ div.phonelogin{
     align-items: center;
     width: 40%;
     height: 80%;
-    margin-left: 10px;
+    /* background-color: bisque; */
 }
 
 /* div.phonelogin *{
@@ -129,9 +145,9 @@ div.weblogin{
     align-items: center;
     height:80%;
     width: 55%;
+    /* background-color: beige; */
+    margin-right: 10px;
 }
-
-
 
 div.chose{
     display: flex;
@@ -182,8 +198,9 @@ input.password{
 label.forget{
     margin-top: 5px;
     font-size: 8px;
-    color: grey
-
+    color: grey;
+    display:block;
+    text-align: center; 
 }
 
 input.submit{
@@ -210,6 +227,7 @@ img.slogan{
     top:50%;
     transform:translate(-50%,-50%);
     z-index: 1;        /* 设置 z-index 为 2 */
+    flex: 1;
 
 
 }
